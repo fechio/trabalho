@@ -1,0 +1,39 @@
+<h1>Listing participantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Login</th>
+      <th>Senha</th>
+      <th>Foto</th>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>Email</th>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @participantes.each do |participante| %>
+      <tr>
+        <td><%= participante.login %></td>
+        <td><%= participante.senha %></td>
+        <td><%= participante.foto %></td>
+        <td><%= participante.nome %></td>
+        <td><%= participante.cidade %></td>
+        <td><%= participante.estado %></td>
+        <td><%= participante.email %></td>
+        <td><%= participante.descricao %></td>
+        <td><%= link_to 'Show', participante %></td>
+        <td><%= link_to 'Edit', edit_participante_path(participante) %></td>
+        <td><%= link_to 'Destroy', participante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Participante', new_participante_path %>

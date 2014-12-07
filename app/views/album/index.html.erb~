@@ -1,0 +1,4 @@
+<h1>YearBook Tópicos 2014</h1>
+<% @participantes.each do |participante| %>
+<%= participante.nome %>
+<% end %>
