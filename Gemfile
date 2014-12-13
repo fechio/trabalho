@@ -4,9 +4,16 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+	gem 'sqlite3', '1.3.8'
+end
+group :production do
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
+end
 
-gem 'paperclip'
+gem "paperclip", "~> 4.2"
+gem 'devise'
 
 
 # Use SCSS for stylesheets

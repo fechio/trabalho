@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/index'
+
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :users, only: [:index]
   get 'album/index'
 
   resources :participantes
@@ -8,7 +12,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root :to => 'album#index' , :as => 'album'
+  #root :to => 'album#index' , :as => 'album'
+  #root :to => "home#index"
+  root :to => "user#index"
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

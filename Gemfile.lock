@@ -28,6 +28,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.9)
     builder (3.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -40,6 +41,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.2.2)
     hike (1.2.3)
@@ -57,11 +65,13 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.3)
     multi_json (1.10.1)
+    orm_adapter (0.5.0)
     paperclip (4.2.0)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.15.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -75,6 +85,11 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.1.6)
       sprockets-rails (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.1.6)
       actionpack (= 4.1.6)
       activesupport (= 4.1.6)
@@ -84,6 +99,8 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     ref (1.0.5)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -103,7 +120,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sqlite3 (1.3.10)
+    sqlite3 (1.3.8)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -117,20 +134,25 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  devise
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip
+  paperclip (~> 4.2)
+  pg (= 0.15.1)
   rails (= 4.1.6)
+  rails_12factor (= 0.0.2)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
-  sqlite3
+  sqlite3 (= 1.3.8)
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)

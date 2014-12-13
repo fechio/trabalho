@@ -1,0 +1,29 @@
+<h1>YearBook Tópicos 2014</h1>
+
+
+
+<% if !user_signed_in? %>
+
+<h3>Descrição:</h3>
+<p>inhcibwicbuiwebcubewiucbuiwebcuiewbcuibewuicbiuwebcuiewbcuiewbcuibewiucbewuibciuebcuiewbcuibewicbeiwcb
+<p>inhcibwicbuiwebcubewiucbuiwebcuiewbcuibewuicbiuwebcuiewbcuiewbcuibewiucbewuibciuebcuiewbcuibewicbeiwcb
+<p>inhcibwicbuiwebcubewiucbuiwebcuiewbcuibewuicbiuwebcuiewbcuiewbcuibewiucbewuibciuebcuiewbcuibewicbeiwcb
+<p>inhcibwicbuiwebcubewiucbuiwebcuiewbcuibewuicbiuwebcuiewbcuiewbcuibewiucbewuibciuebcuiewbcuibewicbeiwcb
+<p>inhcibwicbuiwebcubewiucbuiwebcuiewbcuibewuicbiuwebcuiewbcuiewbcuibewiucbewuibciuebcuiewbcuibewicbeiwcb
+<p>inhcibwicbuiwebcubewiucbuiwebcuiewbcuibewuicbiuwebcuiewbcuiewbcuibewiucbewuibciuebcuiewbcuibewicbeiwcb
+
+<h3><p>Participantes:</h3>
+
+<% @users.each do |user| %>
+<%= user.name %><br></br>
+<%= user.avatar %><br></br>
+<%= image_tag user.avatar.url(:thumb) %>
+
+<% end %>
+<% else %>
+
+teste
+
+<% end %>
+
+
