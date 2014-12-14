@@ -18,34 +18,29 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %><br/>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %><br/>
     <%= f.text_field :name %>
   </div>
 
    <div class="field">
-    <%= f.label :city %><br />
+    <%= f.label :city %><br/>
     <%= f.text_field :city %>
   </div>
 
   <div class="field">
-    <%= f.label :state %><br />
+    <%= f.label :state %><br/>
     <%= f.text_field :state %>
   </div>
 
-  <div class="form-group">
-        <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
-        <div class="col-sm-6">
-            <%= f.file_field :avatar %>
-        </div>
-    </div>
+  <%= f.file_field :avatar %>
 
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %><br/>
     <%= f.text_area :description %>
   </div>
   
