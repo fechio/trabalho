@@ -1,0 +1,36 @@
+<h1>YearBook Tópicos 2014</h1>
+
+
+
+<% if !user_signed_in? %>
+
+<h3>Descrição:</h3>
+<p>YerBook desenvolvido para a disciplina de Tópicos Especiais em Computação 2014/2
+
+
+<p><h3>Participantes:</h3>
+
+
+    <% @users.each do |user| %>
+    <div class="box panel panel-default col-lg-3 text-center" >
+    	<%= user.name %><br></br>
+    	<%= image_tag user.avatar.url(:thumb) %>
+    </div>
+
+<% end %>
+<% else %>
+
+<%= image_tag current_user.avatar.url(:thumb) %><br>
+<h3>Nome:<%= current_user.name %><br></h3>
+<h3>Cidade:<%= current_user.city %><br></h3>
+<h3>Estado:<%= current_user.state %><br></h3>
+<h3>Descrição:<%= current_user.description %></h3><br><br>
+
+<% @users.each do |user| %>
+    <div class="box panel panel-default col-lg-3 text-center" >
+    	<%= user.name %><br></br>
+    	<%= image_tag user.avatar.url(:thumb) %>
+    </div>
+<% end %>
+
+<% end %>
