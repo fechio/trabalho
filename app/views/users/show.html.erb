@@ -2,6 +2,7 @@
 <h2>Perfil: <%= @user.name %> </h2>
 
 <ul>
+	<%= image_tag @user.avatar.url(:thumb) %>
 	<li>Cidade: <%= @user.city %> </li>
 	<li>Estado: <%= @user.state %> </li>
 	<li>Descrição: <%= @user.description %> </li>

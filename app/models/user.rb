@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-  def self.search(search)
-  	search_condition = "%" + search + "%"
-  	find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
+  def self.search(query)
+    where("email like ?", "%#{query}%") 
   end
 end

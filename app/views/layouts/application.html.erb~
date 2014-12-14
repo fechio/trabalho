@@ -53,7 +53,6 @@
   			<%= text_field_tag :search, params[:search] %>
   			<%= submit_tag "Pesquisar", :name => nil %>
 		    <% end %>
-			<% end %>
 		</li>
 
             <li><% if user_signed_in? %>

@@ -1,11 +1,13 @@
 <h1>YearBook Tópicos 2014</h1>
 
 
-
 <% if !user_signed_in? %>
 
+
 <h3>Descrição:</h3>
-<p>YerBook desenvolvido para a disciplina de Tópicos Especiais em Computação 2014/2<br><br>
+
+
+<p>YearBook desenvolvido para a disciplina de Tópicos Especiais em Computação 2014/2<br><br>
 
 
 <p><h3>Participantes:</h3>
@@ -26,10 +28,13 @@
 <h3>Estado:<%= current_user.state %><br></h3>
 <h3>Descrição:<%= current_user.description %></h3><br><br>
 
+
+
+
 <% @users.each do |user| %>
     <div class="box panel panel-default col-lg-3 text-center" >
-    	<%= user.name %><br></br>
-    	<%= image_tag user.avatar.url(:thumb) %>
+    	<%= link_to user.name, user %><br></br>
+    	<%= link_to (image_tag user.avatar.url(:thumb)), user %>
     </div>
 <% end %>
 

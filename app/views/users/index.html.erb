@@ -1,0 +1,13 @@
+<% if request.GET.include? "search" %>
+<p><h3>Resultados:</h3>
+
+
+    <% @users.each do |user| %>
+    <div class="box panel panel-default col-lg-3 text-center" >
+    	<%= link_to user.name, user %><br></br>
+    	<%= link_to (image_tag user.avatar.url(:thumb)), user %>
+    </div>
+
+
+<% end %>
+<% end %>
