@@ -14,15 +14,15 @@
 
 <h3><p>Participantes:</h3>
 
-<% @users.each do |user| %>
-<%= user.name %><br></br>
-<%= image_tag user.avatar.url(:thumb) %>
+
+    <% @users.each do |user| %>
+    <div class="box panel panel-default col-lg-3 text-center" >
+    <%= user.name %><br></br>
+    <%= image_tag user.avatar.url(:thumb) %>
+</div>
 
 <% end %>
 <% else %>
 
-teste
 
 <% end %>
-
-
